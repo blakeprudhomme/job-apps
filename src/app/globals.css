@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --muted: #64748b;
+  --accent: #461D7C;
+  --accent-light: #6d3fa3;
+  --accent-gold: #FDD023;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  @page {
+    margin: 0.3in 0.5in;
+    size: letter;
+  }
+}
+
+/* --- Prose / Markdown styling --- */
+
+.prose h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.prose h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 0.85rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #461D7C !important;
+  border-bottom: 1.5px solid #c4a8e0 !important;
+  padding-bottom: 0.15rem;
+}
+
+.prose h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+  color: #1e293b;
+}
+
+.prose p {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.prose ul {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  padding-left: 1.15rem;
+  list-style-type: disc;
+}
+
+.prose li {
+  margin-top: 0.05rem;
+  margin-bottom: 0.05rem;
+  line-height: 1.4;
+  color: #334155;
+}
+
+.prose li::marker {
+  color: #461D7C !important;
+}
+
+.prose hr {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-color: #e2e8f0;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.prose em {
+  font-style: italic;
+  color: #64748b;
+}
+
+.prose a {
+  color: #461D7C !important;
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+/* Cover letter gets more relaxed line height */
+.cover-letter-body p {
+  line-height: 1.6;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+/* --- Print overrides --- */
+
+@media print {
+  .prose h2 {
+    font-size: 0.65rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.2rem;
+    color: #461D7C !important;
+    border-bottom-color: #c4a8e0 !important;
+  }
+  .prose h3 {
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+  }
+  .prose p,
+  .prose li {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: #1e293b;
+  }
+  .prose li::marker {
+    color: #461D7C !important;
+  }
+  .prose a {
+    color: #1e293b;
+  }
+  .cover-letter-body p {
+    font-size: 0.85rem;
+  }
+}

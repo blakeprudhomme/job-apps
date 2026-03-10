@@ -1,0 +1,14 @@
+{
+  "applications": [
+    {
+      "company": "example-company",
+      "displayName": "Example Corp",
+      "role": "Senior Software Engineer",
+      "status": "interested",
+      "dateAdded": "2026-01-15",
+      "dateApplied": null,
+      "url": "https://example.com/careers/senior-software-engineer",
+      "notes": "Example application. Replace with your own job postings and tailored documents."
+    }
+  ]
+}

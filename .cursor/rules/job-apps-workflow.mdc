@@ -1,0 +1,10 @@
+---
+description: Job application tailoring workflow — triggered when user shares a job posting URL or description
+globs:
+  - "data/**"
+  - "**"
+---
+
+# Job Application Hub Workflow
+
+See [docs/workflow.md](../../docs/workflow.md) for the full workflow instructions.
